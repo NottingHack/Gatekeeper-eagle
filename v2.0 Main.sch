@@ -8393,6 +8393,47 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <rectangle x1="7.366" y1="1.016" x2="7.874" y2="1.524" layer="51"/>
 <rectangle x1="7.366" y1="-1.524" x2="7.874" y2="-1.016" layer="51"/>
 </package>
+<package name="FIDUCIAL-1.5X3">
+<circle x="0" y="0" radius="1.5" width="0" layer="29"/>
+<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="0" y="0" radius="1.6" width="0" layer="41"/>
+</package>
+<package name="FIDUCIAL-1X2">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2.5">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="0" y="0" radius="1.5" width="0" layer="29"/>
+</package>
+<package name="MICRO-FIDUCIAL">
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="MICRO-FIDUCIAL-STOP">
+<circle x="0" y="0" radius="0.5" width="0" layer="29"/>
+<circle x="0" y="0" radius="0.5" width="0" layer="41"/>
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" stop="no" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2-STOP">
+<circle x="0" y="0" radius="0.8" width="0" layer="29"/>
+<circle x="0" y="0" radius="0.85" width="0" layer="41"/>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2-STOP_MEDIUM">
+<circle x="0" y="0" radius="0.7" width="0" layer="29"/>
+<circle x="0" y="0" radius="0.75" width="0" layer="41"/>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+</package>
+<package name="FIDUCIAL-1.5X3-CREAM">
+<circle x="0" y="0" radius="0.25" width="1" layer="31"/>
+<circle x="0" y="0" radius="1.5" width="0" layer="29"/>
+<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" stop="no"/>
+<circle x="0" y="0" radius="1.6" width="0" layer="41"/>
+</package>
+<package name="FIDUCIAL-1X2.5-STOP">
+<circle x="0" y="0" radius="1.55" width="0" layer="41"/>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<circle x="0" y="0" radius="1.5" width="0" layer="29"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ARDUINOSPI">
@@ -8658,6 +8699,11 @@ Basic SMA packaged diode. Good for reverse polarization protection. Common part 
 <pin name="8" x="10.16" y="0" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="9" x="10.16" y="2.54" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
 <pin name="10" x="10.16" y="5.08" visible="pad" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+<symbol name="FIDUCIAL">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -12067,6 +12113,60 @@ Standard 10-pin 0.1" header. Use with straight break away headers (SKU : PRT-001
 <connect gate="G$1" pin="8" pad="8"/>
 <connect gate="G$1" pin="9" pad="9"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL" prefix="JP">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1.5X3" package="FIDUCIAL-1.5X3">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2.5" package="FIDUCIAL-1X2.5">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL-STOP" package="MICRO-FIDUCIAL-STOP">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2-STOP" package="FIDUCIAL-1X2-STOP">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2-STOP-MEDIUM" package="FIDUCIAL-1X2-STOP_MEDIUM">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1.5X3-CREAM" package="FIDUCIAL-1.5X3-CREAM">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="1X2.5-STOP" package="FIDUCIAL-1X2.5-STOP">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -25182,6 +25282,9 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <part name="C10" library="CISECO eaglecad designs" deviceset="C-EU" device="C1210" value="1210 100uF"/>
 <part name="JP10" library="CISECO eaglecad designs" deviceset="M10" device="LOCK"/>
 <part name="C11" library="rcl" deviceset="CPOL-EU" device="C" value="C 100uF 6.3V"/>
+<part name="JP4" library="CISECO eaglecad designs" deviceset="FIDUCIAL" device="1X2.5-STOP"/>
+<part name="JP7" library="CISECO eaglecad designs" deviceset="FIDUCIAL" device="1X2.5-STOP"/>
+<part name="JP9" library="CISECO eaglecad designs" deviceset="FIDUCIAL" device="1X2.5-STOP"/>
 </parts>
 <sheets>
 <sheet>
@@ -25283,6 +25386,9 @@ Source: http://products.nichicon.co.jp/en/pdf/XJA043/e-ud.pdf</description>
 <attribute name="NAME" x="163.703" y="157.9626" size="1.778" layer="95"/>
 <attribute name="VALUE" x="163.703" y="152.8826" size="1.778" layer="96" rot="R270"/>
 </instance>
+<instance part="JP4" gate="G$1" x="220.98" y="22.86"/>
+<instance part="JP7" gate="G$1" x="223.52" y="22.86"/>
+<instance part="JP9" gate="G$1" x="226.06" y="22.86"/>
 </instances>
 <busses>
 </busses>
